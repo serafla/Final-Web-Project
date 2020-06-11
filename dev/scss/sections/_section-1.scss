@@ -1,0 +1,96 @@
+/* =============
+    Section 1
+============= */
+
+#section-1 {
+    text-align: center;
+    width: 105%;
+    margin-left: -2%;
+
+    #hero {
+        background-image: url(../img/Hero-gradient.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 65vh;
+
+        @include md {
+            height: 70vh;
+        }
+
+        @include lg {
+            height: 80vh;
+        }
+
+        #visit-container {
+            margin-left: -10%;
+            display: grid;
+            grid-template-columns: auto 50px auto;
+            grid-template-areas:
+                ". title ."
+                ". hr .";
+
+            @include lg {
+                margin-left: -8%;
+            }
+
+            #visit-title {
+                margin-left: 15px;
+                grid-area: title;
+                text-align: center;
+                font-size: rem-calc(16);
+                letter-spacing: 10px;
+                color: $white;
+                padding-top: 60px;
+
+                @include md {
+                    font-size: rem-calc(20);
+                    margin-left: 12px;
+                }
+
+                @include lg {
+                    font-size: rem-calc(24);
+                    margin-left: 32px;
+                }
+            }
+
+            hr {
+                margin-top: -5px;
+                grid-area: hr;
+                height: 2px;
+                width: 100px;
+                background-color: $white;
+                border: none;
+
+                @include lg {
+                    width: 150px;
+                }
+            }
+        }
+
+
+
+        #festival {
+            text-align: center;
+            margin-top: 10px;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-size: rem-calc(40);
+            color: $white;
+
+            @include md {
+                font-size: rem-calc(50);
+            }
+
+            @include lg {
+                font-size: rem-calc(60);
+            }
+        }
+    }
+
+
+
+
+
+
+}

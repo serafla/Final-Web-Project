@@ -1,0 +1,124 @@
+/* =============
+    Footer
+============= */
+
+
+#footer {
+    margin-top: 150px;
+    width: 105%;
+    margin-left: -2%;
+
+
+    #circles {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -35px;
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: $white;
+            font-size: rem-calc(30);
+            margin-right: 10px;
+            margin-left: 10px;
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            background-color: $dark-pink;
+
+            @include md {
+                height: 80px;
+                width: 80px;
+                font-size: rem-calc(35);
+            }
+        }
+    }
+
+
+
+    #footer-info {
+        display: grid;
+        grid-template-columns: 5% auto 5%;
+        grid-template-areas: ". footer-container .";
+        background-color: $green;
+        padding: 10%;
+        padding-bottom: 5%;
+        color: $white;
+        text-align: center;
+
+        @include md {
+            padding: 50px;
+        }
+
+        #footer-container {
+            grid-area: footer-container;
+
+            @include md {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-areas:
+                    "header header"
+                    "location contact"
+                    "website website";
+            }
+
+            #japan-society {
+                grid-area: header;
+                font-size: rem-calc(20);
+
+                @include md {
+                    font-size: rem-calc(25);
+                }
+            }
+
+            #location {
+                grid-area: location;
+
+                @include md {
+                    margin-right: 15%;
+                }
+
+            }
+
+            #contact {
+                grid-area: contact;
+
+                #phone {
+                    margin-top: -15px;
+                }
+
+                @include md {
+                    margin-left: 15%;
+                }
+            }
+
+
+
+            #website {
+                grid-area: website;
+                margin-top: 20%;
+
+                @include md {
+                    margin-top: 50px;
+                }
+            }
+
+            h6 {
+                color: $white;
+                font-size: rem-calc(18);
+            }
+
+            hr {
+                margin-top: -30px;
+                height: 2px;
+                width: 35%;
+                border: none;
+                background-color: $white;
+            }
+        }
+
+
+    }
+}

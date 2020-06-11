@@ -1,0 +1,101 @@
+/* =============
+    Header
+============= */
+
+
+
+#header {
+    height: 70px;
+    margin-top: -15px;
+    width: 105%;
+    margin-left: -2%;
+    position: fixed;
+    z-index: 1000;
+    background: rgb(255, 115, 115);
+    background: linear-gradient(90deg, rgba(255, 115, 115, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+    @include md {
+        margin-top: -40px;
+        height: 90px;
+    }
+
+    @include lg {
+        height: 90px;
+    }
+
+    >div {
+        display: grid;
+        grid-template-columns: 80% auto;
+        grid-template-areas: "logo burger"
+            "nav nav";
+
+        @include lg {
+            grid-template-columns: 30% auto;
+            grid-template-areas: "logo nav";
+        }
+
+        #logo-container {
+            grid-area: logo;
+            margin-left: 5%;
+            margin-top: -15px;
+            font-size: rem-calc(24);
+            color: white;
+
+            @include md {
+                margin-top: 12px;
+            }
+
+            @include lg {
+                margin-left: 10%;
+            }
+        }
+
+
+        #burger-container {
+            grid-area: burger;
+            display: flex;
+            justify-content: flex-end;
+            font-size: rem-calc(21);
+            color: $dark-pink;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-right: 40%;
+            margin-top: -15px;
+
+            @include md {
+                margin-top: 10px;
+            }
+
+            @include lg {
+                display: none !important;
+            }
+        }
+
+        #burger-container:hover {
+            color: $green;
+        }
+
+
+        #nav-container {
+            font-size: rem-calc(24);
+            background-color: $white;
+            opacity: 90%;
+            -khtml-opacity: 0.5;
+            grid-area: nav;
+            display: none;
+
+
+            ul {
+                list-style-type: none;
+                color: $white;
+            }
+
+            @include lg {
+                opacity: 100%;
+                margin-top: -12px;
+                background-color: transparent;
+                display: block !important;
+            }
+        }
+    }
+}

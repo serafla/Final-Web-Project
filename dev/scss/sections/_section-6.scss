@@ -1,0 +1,159 @@
+/* =============
+    Section 6
+============= */
+
+#section-6 {
+    margin-top: 150px;
+    width: 105%;
+    margin-left: -2%;
+
+    @include lg {
+        margin-top: 300px;
+    }
+
+    #tickets-header {
+        grid-area: header;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+
+        #tickets-circle {
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            background-color: $dark-pink;
+        }
+
+
+        h2 {
+            margin-left: -26px;
+            font-size: rem-calc(24);
+        }
+
+    }
+
+
+
+    #items {
+        background-color: $peach;
+        padding: 5%;
+
+        @include md {
+            display: grid;
+            grid-template-columns: 68% 32%;
+            grid-template-areas:
+                "tickets button"
+                "tickets p1";
+        }
+
+        @include lg {
+            width: 77%;
+            padding: 40px;
+            margin-left: 17%;
+            grid-template-columns: 35% 75%;
+            grid-template-areas:
+                "button tickets"
+                "p1 tickets";
+        }
+
+        ul {
+            grid-area: tickets;
+            margin: 0 auto;
+
+            @include md {
+                width: 450px;
+            }
+
+            li {
+                display: flex;
+                justify-content: space-between;
+
+                #ticket-1 {
+                    margin-top: 5%;
+                    margin-left: 5%;
+                    width: 80%;
+                }
+
+                #price-1 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 70px;
+                    width: 70px;
+                    background: rgb(255, 137, 137);
+                    background: linear-gradient(90deg, rgba(255, 137, 137, 1) 0%, rgba(255, 190, 190, 1) 100%);
+                }
+
+                #ticket-2 {
+                    margin-top: 5%;
+                    margin-left: 5%;
+                    width: 80%;
+                }
+
+                #price-2 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 70px;
+                    width: 70px;
+                    background: rgb(255, 137, 137);
+                    background: linear-gradient(90deg, rgba(255, 137, 137, 1) 0%, rgba(255, 190, 190, 1) 100%);
+                }
+
+                #ticket-3 {
+                    margin-top: 7%;
+                    margin-left: 5%;
+                    width: 80%;
+                }
+
+                #price-3 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 70px;
+                    width: 70px;
+                    font-size: rem-calc(24);
+                    background: rgb(255, 137, 137);
+                    background: linear-gradient(90deg, rgba(255, 137, 137, 1) 0%, rgba(255, 190, 190, 1) 100%);
+                }
+            }
+        }
+
+        #buy-tickets {
+            grid-area: button;
+            margin: 0 auto;
+            margin-top: 5%;
+            padding: 20px;
+            width: 200px;
+            height: 40px;
+            background-color: $dark-pink;
+            text-align: center;
+            color: $white;
+            font-size: rem-calc(24);
+            transition-duration: 0.25s;
+
+            @include md {
+                margin-top: 30%;
+            }
+
+        }
+
+        #buy-tickets:hover {
+            background-color: $green;
+        }
+
+        #sales-final {
+            grid-area: p1;
+            font-size: rem-calc(16);
+            color: $green;
+            text-align: center;
+
+            @include md {
+                margin-top: -40px;
+            }
+        }
+    }
+
+
+
+}

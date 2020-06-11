@@ -1,0 +1,160 @@
+/* =============
+    Section 3
+============= */
+
+#section-3 {
+    margin-top: 150px;
+
+    @include md {
+        display: grid;
+        grid-template-columns: auto 750px auto;
+        grid-template-areas:
+            "header header header"
+            ". history-1 ."
+            ". history-2 .";
+    }
+
+    @include lg {
+        grid-template-columns: auto 460px 460px auto;
+        grid-template-areas:
+            ". header header ."
+            ". history-1  history-2 .";
+
+    }
+
+
+
+    #history-header {
+        grid-area: header;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+
+
+        #history-circle {
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            background-color: $dark-pink;
+        }
+
+
+        h2 {
+            margin-left: -26px;
+            font-size: rem-calc(24);
+        }
+
+    }
+
+    #history-1 {
+        grid-area: history-1;
+        display: grid;
+        grid-template-columns: auto 90% auto;
+        grid-template-areas:
+            ". history-image-1 ."
+            ". p1 .";
+
+        @include md {
+            grid-template-columns: 375px 375px;
+            grid-template-areas: "history-image-1 p1";
+            height: 41.8vh;
+
+        }
+
+        @include lg {
+            margin-top: 5px;
+            grid-template-columns: auto 400px auto;
+            grid-template-areas:
+                ". history-image-1 ."
+                ". p1 .";
+
+        }
+
+
+
+
+        #history-image-1 {
+            grid-area: history-image-1;
+            background-image: url(../img/tree-planting-1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 40vh;
+
+        }
+
+        #p1 {
+            margin-top: 0px;
+            grid-area: p1;
+            font-size: rem-calc(16);
+            color: $white;
+            padding: 24px;
+            background-color: $green;
+
+            @include md {
+                text-align: right;
+            }
+
+            @include lg {
+                text-align: left
+            }
+        }
+    }
+
+    #history-2 {
+        grid-area: history-2;
+        margin-top: 5px;
+        display: grid;
+        grid-template-columns: auto 90% auto;
+        grid-template-areas:
+            ". history-image-2 ."
+            ". p2 .";
+
+        @include md {
+            grid-template-columns: 375px 375px;
+            grid-template-areas: "p2 history-image-2";
+        }
+
+        @include lg {
+            grid-template-columns: auto 400px auto;
+            grid-template-areas:
+                ". history-image-2 ."
+                ". p2 .";
+        }
+
+
+
+
+        #history-image-2 {
+            grid-area: history-image-2;
+            background-image: url(../img/festival-image-2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 41.5vh;
+
+            @include lg {
+                height: 40vh;
+            }
+        }
+
+        #p2 {
+            margin-top: 0px;
+            padding: 32px;
+            grid-area: p2;
+            font-size: rem-calc(16);
+            color: $white;
+            background-color: $green;
+
+            @include md {
+                text-align: left;
+            }
+
+            @include lg {
+                margin-bottom: 0px;
+                padding-bottom: 66px;
+            }
+        }
+    }
+
+}

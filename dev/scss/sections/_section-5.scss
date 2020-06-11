@@ -1,0 +1,188 @@
+/* =============
+    Section 5
+============= */
+
+#section-5 {
+    width: 105%;
+    margin-left: -2%;
+    display: grid;
+    margin-top: 150px;
+    grid-template-columns: 5% auto 5%;
+    grid-template-areas:
+        "header header header"
+        ". content ."
+        "gallery gallery gallery";
+
+
+    @include lg {
+        background-color: $green;
+        height: 550px;
+        margin-top: 150px;
+        grid-template-columns: auto 750px auto;
+        grid-template-areas:
+            "header header header"
+            ". content ."
+            ". gallery .";
+
+    }
+
+
+    #events-header {
+        grid-area: header;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+
+        #events-circle {
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            background-color: $dark-pink;
+        }
+
+
+        h2 {
+            margin-left: -26px;
+            font-size: rem-calc(24);
+        }
+
+        @include lg {
+            margin-top: 30px;
+        }
+
+    }
+
+    #events-content {
+        font-size: rem-calc(16);
+        grid-area: content;
+        margin-left: 5%;
+        margin-right: 5%;
+        color: $black;
+
+        @include lg {
+            color: $black;
+        }
+
+        hr {
+            margin-top: 40px;
+            height: 4px;
+            background-color: $dark-pink;
+            border: none;
+
+            @include lg {
+                background-color: $white;
+            }
+        }
+
+        h6 {
+            font-size: rem-calc(22);
+            color: $dark-pink;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+
+            @include md {
+                font-size: rem-calc(24);
+            }
+
+            @include lg {
+                color: $white;
+            }
+        }
+
+    }
+
+    #gallery {
+        grid-area: gallery;
+
+        #event-1 {
+            background-image: url(../img/event-1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 40vh;
+
+            #circle-container {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 30%;
+
+                @include md {
+                    padding-top: 150px;
+                }
+
+                #circle-1 {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 100%;
+                    background-color: $dark-pink;
+                    margin-left: 20px;
+
+                    #event-1-left {
+                        margin-top: -8px;
+                        font-size: rem-calc(45);
+                        display: flex;
+                        justify-content: center;
+                        color: $white;
+
+                    }
+
+                }
+
+                #circle-1:hover {
+                    background-color: $green;
+                }
+
+                #circle-2 {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 100%;
+                    background-color: $dark-pink;
+                    margin-right: 20px;
+
+                    #event-1-right {
+                        margin-top: -8px;
+                        font-size: rem-calc(45);
+                        display: flex;
+                        justify-content: center;
+                        color: $white;
+                    }
+                }
+
+                #circle-2:hover {
+                    background-color: $green;
+                }
+
+
+            }
+
+        }
+
+        @include md {
+            display: grid;
+            grid-template-columns: 25% 50% 25%;
+            grid-template-areas: "event-2 event-1 event-3";
+
+            #event-2 {
+                grid-area: event-2;
+                background-image: url(../img/event-2-white.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 40vh;
+            }
+
+            #event-3 {
+                grid-area: event-3;
+                background-image: url(../img/event-3-white.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: -50px 0;
+                height: 40vh;
+            }
+        }
+
+
+    }
+
+}

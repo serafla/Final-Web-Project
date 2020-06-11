@@ -1,0 +1,96 @@
+/* =============
+    Section 2
+============= */
+
+#section-2 {
+    margin-top: 150px;
+    width: 105%;
+    margin-left: -2%;
+
+    #about-header {
+        grid-area: header;
+        display: flex;
+        justify-content: center;
+
+        #about-circle {
+            height: 60px;
+            width: 60px;
+            border-radius: 100%;
+            background-color: $dark-pink;
+        }
+
+
+        h2 {
+            margin-left: -26px;
+            font-size: rem-calc(24);
+        }
+    }
+
+
+    #about-container {
+        grid-area: about-container;
+
+        @include md {
+            display: grid;
+            grid-template-columns: auto 70% auto;
+            grid-template-areas:
+                "header header header"
+                ". video ."
+                "text text text";
+        }
+
+        @include lg {
+            grid-template-columns: auto 400px 600px auto;
+            grid-template-areas:
+                ". header header ."
+                ". text video .";
+
+        }
+
+        p {
+            text-align: center;
+            grid-area: text;
+            background-color: $peach;
+            padding: 10%;
+            font-size: rem-calc(20);
+            color: $dark-pink;
+
+            @include md {
+                text-align: left;
+                padding: 8%;
+            }
+
+            @include lg {
+                padding: 12%;
+            }
+        }
+
+        #video {
+            grid-area: video;
+            margin-top: -20px;
+
+            .video-wrapper {
+                padding-bottom: 56.25%;
+                height: 0;
+            }
+
+            .video-wrapper iframe {
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+
+                @include lg {
+                    height: 665px;
+                }
+            }
+
+            @include md {
+                margin-top: 20px;
+            }
+
+        }
+
+    }
+
+}
