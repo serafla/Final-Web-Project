@@ -144,7 +144,7 @@ h5 {
 #header > div #logo-container {
   grid-area: logo;
   margin-left: 5%;
-  margin-top: -15px;
+  margin-top: 0px;
   font-size: 1.5rem;
   color: white;
 }
@@ -197,7 +197,7 @@ h5 {
 @media (min-width: 992px) {
   #header > div #nav-container {
     opacity: 100%;
-    margin-top: -12px;
+    margin-top: -35px;
     background-color: transparent;
     display: block !important;
   }
