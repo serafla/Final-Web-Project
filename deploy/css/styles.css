@@ -792,14 +792,14 @@ h5 {
     color: #000;
   }
 }
-#section-5 #events-content hr {
+#section-5 #events-content #hr2 {
   margin-top: 40px;
   height: 4px;
   background-color: #FF7373;
   border: none;
 }
 @media (min-width: 992px) {
-  #section-5 #events-content hr {
+  #section-5 #events-content #hr2 {
     background-color: #fff;
   }
 }
