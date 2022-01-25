@@ -55,8 +55,7 @@
             grid-area: burger;
             display: flex;
             justify-content: flex-end;
-            font-size: rem-calc(21);
-            color: $dark-pink;
+            align-items: center;
             padding-top: 40px;
             padding-bottom: 40px;
             padding-right: 40%;
@@ -69,11 +68,18 @@
             @include lg {
                 display: none !important;
             }
+
+            #burger{
+                position:absolute;
+                z-index: 1000;
+                height: 40px;
+                width: 40px;
+            }
         }
 
-        #burger-container:hover {
-            color: $green;
-        }
+        // #burger-container:hover {
+        //     color: $green;
+        // }
 
 
         #nav-container {
@@ -82,7 +88,10 @@
             opacity: 90%;
             -khtml-opacity: 0.5;
             grid-area: nav;
-            display: none;
+            position: fixed;
+            height: 100vw;
+            width: 100vh;
+            z-index: 500;
 
 
             ul {
@@ -92,9 +101,10 @@
 
             @include lg {
                 opacity: 100%;
-                margin-top: -35px;
+                // margin-top: -35px;
                 background-color: transparent;
-                display: block !important;
+                position: static;
+                // display: block !important;
             }
         }
     }

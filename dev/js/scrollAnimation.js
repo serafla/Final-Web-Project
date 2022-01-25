@@ -74,8 +74,8 @@ export function ScaleRight(animationElement, triggerElement){
             start: "top 80%",
             end: "bottom 60%",
             toggleActions: "restart none resume none",
-            scrub: true,
-            markers: true
+            scrub: true
+            // markers: true
         }
     });
 
